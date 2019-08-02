@@ -29,4 +29,26 @@ public class StringManipulations {
         return sb.toString();
     }
 
+    //1.3: function to remove duplicate characters in a string
+    public String removeDuplicatesInString(String str) {
+        String resultStr = str;
+        if(str == null) return null;
+
+        if(str.length() < 2) return resultStr;
+
+        for(int i=0; i<resultStr.length(); i++) {
+            for(int j=i+1; j<resultStr.length(); j++) {
+                if(resultStr.charAt(j) == resultStr.charAt(i)) {
+                    StringBuilder tempStr =
+                            new StringBuilder(resultStr.substring(0, j) + resultStr.substring(j+1));
+                    resultStr = tempStr.toString();
+                }
+            }
+        }
+        return resultStr;
+
+    }
+
+
+
 }
