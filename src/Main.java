@@ -3,8 +3,11 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        StringManipulations obj = new StringManipulations();
-         System.out.println(obj.removeDuplicatesInString("aaaa"));
+        IntLinkedList list = new IntLinkedList();
+        list.insert(1);
+        list.insert(2);
+        list.insert(10);
+        list.displayList();
     }
 }
 
